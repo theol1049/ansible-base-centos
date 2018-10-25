@@ -1,0 +1,9 @@
+---
+- name: Upgrade packages
+  yum: name=* state=latest
+
+- name: Install packages
+  yum:
+    name: ['fail2ban', 'ufw']
+    state: present
+    update_cache: yes
